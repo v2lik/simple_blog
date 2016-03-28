@@ -1,0 +1,11 @@
+# Ignore all logfiles and tempfiles.
+/log
+/tmp
+
+# Ignore local configuration
+/config/database.yml
+/config/secrets.yml
+
+# publics
+/public/system/
+/public/assets/
