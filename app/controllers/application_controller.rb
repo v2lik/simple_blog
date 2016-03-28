@@ -1,4 +1,3 @@
-# Filters added to this controller apply to all controllers in the application
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 end

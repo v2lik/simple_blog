@@ -1,2 +1,7 @@
 en:
+  activerecord:
+    errors:
+      models:
+        comment:
+          one_of_ancestors: Please select one of the ancestors
   title: SimpleBlog
