@@ -1,6 +1,6 @@
 <li>
   <%= comment.body %>
-  <%= link_to 'Destroy', [post, comment], method: :delete, data: { confirm: t('views.confirm') }, remote:  true, class: 'delete-comment' %>
-  <%= link_to 'Edit', edit_post_comment_path(post, comment) %>
+  <%= link_to t('views.edit'), edit_post_comment_path(post, comment) %>
+  <%= link_to t('views.destroy'), [post, comment], method: :delete, data: { confirm: t('views.confirm') }, remote:  true, class: 'delete-comment' %>
   <%= render partial: 'comments/child_form', locals: { post: post, comment: comment } %>
 </li>

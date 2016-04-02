@@ -6,10 +6,11 @@ en:
         comment:
           one_of_ancestors: Please select one of the ancestors
   controllers:
-    posts:
-      create: Post created
-      update: Post updated
-      destroy: Post destroyed
+    create: '%{model} created'
+    update: '%{model} updated'
+    destroy: '%{model} destroyed'
   views:
+    edit: Edit
+    destroy: Destroy
     confirm: Are you sure?
     submit: Submit

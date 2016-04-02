@@ -1,5 +1,5 @@
 <%= form_for [@post, @comment || @post.comments.build] do |f| %>
   <%= f.text_field :body %>
 
-  <%= f.submit I18n.t('views.submit') %>
+  <%= f.submit t 'views.submit' %>
 <% end %>

@@ -1,5 +1,5 @@
 <%= form_for :comment, url: create_child_post_comment_path(post, comment) do |f| %>
   <%= f.text_field :body %>
 
-  <%= f.submit I18n.t('views.submit') %>
+  <%= f.submit t 'views.submit' %>
 <% end %>

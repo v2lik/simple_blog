@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     # current user
     @post = User.last.posts.build post_params
     if @post.save
-      flash[:success] = I18n.t('controllers.posts.create')
+      flash[:success] = I18n.t 'controllers.create', model: @post.class
       redirect_to @post
     else
       render :new
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes post_params
-      flash[:success] = I18n.t('controllers.posts.update')
+      flash[:success] = I18n.t 'controllers.update', model: @post.class
       redirect_to @post
     else
       render :edit
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @post.destroy
     respond_to do |format|
       format.html do
-        flash[:success] = I18n.t('controllers.posts.destroy')
+        flash[:success] = I18n.t 'controllers.destroy', model: @post.class
         redirect_to posts_path
       end
       format.js { render layout: false }
