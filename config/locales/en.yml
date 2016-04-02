@@ -1,7 +1,15 @@
 en:
+  title: SimpleBlog
   activerecord:
     errors:
       models:
         comment:
           one_of_ancestors: Please select one of the ancestors
-  title: SimpleBlog
+  controllers:
+    posts:
+      create: Post created
+      update: Post updated
+      destroy: Post destroyed
+  views:
+    confirm: Are you sure?
+    submit: Submit

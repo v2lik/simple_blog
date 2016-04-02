@@ -1,0 +1,5 @@
+<%= @post.body %>
+<ul>
+  <%= comments_tree @post.comments, @post %>
+</ul>
+<%= render 'comments/form' %>
