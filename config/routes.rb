@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   end
 
   resources :users, except: :index
+
+  get 'login', to: 'sessions#new', as: :login
+  delete 'logout', to: 'sessions#destroy', as: :logout
+  resources :sessions, only: :create
 end

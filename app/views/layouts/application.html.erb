@@ -12,6 +12,10 @@
     <%= content_tag(:div, value, class: "alert alert-#{key}") %>
   <% end %>
 
+  <% if current_user? %>
+    <%= link_to t('views.logout'), logout_path, method: :delete %>
+  <% end %>
+
 <%= yield %>
 
 </body>

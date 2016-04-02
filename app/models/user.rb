@@ -6,4 +6,14 @@ class User < ActiveRecord::Base
 
   validates :login, presence: true, uniqueness: true
   validates :password, length: { minimum: 6 }
+
+  class << self
+    def new_auth_token
+      SecureRandom.urlsafe_base64
+    end
+
+    def encrypt(token)
+      Digest::SHA1.hexdigest(token.to_s)
+    end
+  end
 end

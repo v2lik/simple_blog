@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_user, except: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :skip_current_user, only: [:new, :create]
 
   def new
     @user = User.new
@@ -8,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      login @user
       flash[:success] = I18n.t 'controllers.create', model: @user.class
       redirect_to root_path
     else

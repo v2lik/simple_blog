@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
+  before_action :require_user
   before_action :set_comment, only: [:create, :edit, :update, :destroy]
   before_action :set_post, only: [:create, :edit, :update, :destroy]
 
   def create
-    # current user
-    comment = User.last.comments.build comment_params
+    comment = current_user.comments.build comment_params
     comment.post = @post unless @comment
     comment.parent = @comment
     comment.save

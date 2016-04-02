@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :require_user
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -10,8 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    # current user
-    @post = User.last.posts.build post_params
+    @post = current_user.posts.build post_params
     if @post.save
       flash[:success] = I18n.t 'controllers.create', model: @post.class
       redirect_to @post

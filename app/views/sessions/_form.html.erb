@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+<%= form_for :session, url: sessions_path do |f| %>
   <%= f.label :login %>
   <%= f.text_field :login %>
 
@@ -8,4 +8,4 @@
   <%= f.submit t 'views.submit' %>
 <% end %>
 
-<%= link_to t('views.sing_in'), login_path %>
+<%= link_to t('views.sign_up'), new_user_path %>

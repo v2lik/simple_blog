@@ -14,3 +14,6 @@ en:
     destroy: Destroy
     confirm: Are you sure?
     submit: Submit
+    logout: Logout
+    sing_in: Sing In
+    sign_up: Sign Up
