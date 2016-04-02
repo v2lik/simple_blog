@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   validates :login, presence: true, uniqueness: true
-  validates :password, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }
 
   class << self
     def new_auth_token

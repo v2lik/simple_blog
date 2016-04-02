@@ -3,6 +3,8 @@
     <%= post.title %>
     <%= post.body %>
   <% end %>
-  <%= link_to t('views.edit'), edit_post_path(post) %>
-  <%= link_to t('views.destroy'), post, method: :delete, data: { confirm: t('views.confirm') }, remote:  true, class: 'delete-post' %>
+  <% if owner?(post) %>
+    <%= link_to t('views.edit'), edit_post_path(post) %>
+    <%= link_to t('views.destroy'), post, method: :delete, data: { confirm: t('views.confirm') }, remote:  true, class: 'delete-post' %>
+  <% end %>
 </li>

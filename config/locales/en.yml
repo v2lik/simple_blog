@@ -9,6 +9,7 @@ en:
     create: '%{model} created'
     update: '%{model} updated'
     destroy: '%{model} destroyed'
+    login_errors: Invalid email/password combination
   views:
     edit: Edit
     destroy: Destroy
@@ -17,3 +18,7 @@ en:
     logout: Logout
     sing_in: Sing In
     sign_up: Sign Up
+    error_explanation: The form contains
+    posts: All Posts
+    new_post: New Post
+    show_profile: Show Profile

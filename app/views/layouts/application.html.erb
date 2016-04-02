@@ -8,12 +8,15 @@
 </head>
 <body>
 
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% if signed_in? %>
+    <%= link_to t('views.posts'), posts_path %>
+    <%= link_to t('views.new_post'), new_post_path %>
+    <%= link_to t('views.show_profile'), user_path(current_user) %>
+    <%= link_to t('views.logout'), logout_path, method: :delete %>
   <% end %>
 
-  <% if current_user? %>
-    <%= link_to t('views.logout'), logout_path, method: :delete %>
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
   <% end %>
 
 <%= yield %>

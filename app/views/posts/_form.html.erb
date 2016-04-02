@@ -1,4 +1,6 @@
 <%= form_for @post do |f| %>
+  <%= render 'shared/errors', object: f.object %>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
 

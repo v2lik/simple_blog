@@ -1,4 +1,6 @@
 <%= form_for @user do |f| %>
+  <%= render 'shared/errors', object: f.object %>
+
   <%= f.label :login %>
   <%= f.text_field :login %>
 
@@ -8,4 +10,6 @@
   <%= f.submit t 'views.submit' %>
 <% end %>
 
-<%= link_to t('views.sing_in'), login_path %>
+<% unless signed_in? %>
+  <%= link_to t('views.sing_in'), login_path %>
+<% end %>

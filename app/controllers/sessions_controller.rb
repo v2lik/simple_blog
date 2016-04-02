@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       login @user
       redirect_to root_path
     else
+      flash.now[:error] = I18n.t 'controllers.login_errors'
       render :new
     end
   end
