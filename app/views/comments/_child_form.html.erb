@@ -1,5 +1,8 @@
-<%= form_for :comment, url: create_child_post_comment_path(post, comment) do |f| %>
-  <%= f.text_field :body %>
-
-  <%= f.submit t 'views.submit' %>
+<%= form_for :comment, url: create_child_post_comment_path(post, comment), html: { class: 'comment-child-form' } do |f| %>
+  <div class="panel-body">
+    <div class="row form-group">
+      <%= f.text_area :body, class: 'col-xs-8 form-control' %>
+    </div>
+    <%= f.submit t('views.submit'), class: 'btn btn-primary' %>
+  </div>
 <% end %>

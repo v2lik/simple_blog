@@ -1,0 +1,22 @@
+ul.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #e1e8ed;
+  }
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.post {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #e1e8ed;
+}

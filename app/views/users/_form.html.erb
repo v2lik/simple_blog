@@ -1,16 +1,23 @@
 <%= form_for @user, multipart: true do |f| %>
-  <%= render 'shared/errors', object: f.object %>
+  <div class="panel-body">
+    <%= render 'shared/errors', object: f.object %>
 
-  <%= f.label :login %>
-  <%= f.text_field :login %>
+    <div class="row form-group">
+      <%= f.label :login, class: 'col-xs-4 control-label' %>
+      <%= f.text_field :login, autocomplete: :off, class: 'col-xs-8 form-control' %>
+    </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+    <div class="row form-group">
+      <%= f.label :password, class: 'col-xs-4 control-label' %>
+      <%= f.password_field :password, class: 'col-xs-8 form-control' %>
+    </div>
 
-  <%= f.label :avatar %>
-  <%= f.file_field :avatar %>
-
-  <%= f.submit t 'views.submit' %>
+    <div class="row form-group">
+      <%= f.label :avatar, class: 'col-xs-4 control-label' %>
+      <%= f.file_field :avatar, class: 'col-xs-8 form-control' %>
+    </div>
+  </div>
+  <%= f.submit t('views.submit'), class: 'btn btn-primary' %>
 <% end %>
 
 <% unless signed_in? %>

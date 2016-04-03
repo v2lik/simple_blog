@@ -1,9 +1,28 @@
 <li>
-  <%= image_tag comment.user.avatar %>
-  <%= comment.body %>
-  <% if owner?(comment) %>
-    <%= link_to t('views.edit'), edit_post_comment_path(post, comment) %>
-    <%= link_to t('views.destroy'), [post, comment], method: :delete, data: { confirm: t('views.confirm') }, remote:  true, class: 'delete-comment' %>
-  <% end %>
-  <%= render partial: 'comments/child_form', locals: { post: post, comment: comment } %>
+  <div class="row">
+    <div class="col-xs-1">
+      <%= image_tag comment.user.avatar, height: '45' %>
+    </div>
+    <div class="col-xs-11">
+      <div class="row">
+        <div class="col-xs-12 comment-body">
+          <%= comment.body %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <% if owner?(comment) %>
+        <%= link_to t('views.edit'), edit_post_comment_path(post, comment) %>
+        <%= link_to t('views.destroy'), [post, comment], method: :delete, data: { confirm: t('views.confirm') }, remote:  true, class: 'delete-comment' %>
+      <% end %>
+      <%= link_to t('views.comment'), '', class: 'show-child-form' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render partial: 'comments/child_form', locals: { post: post, comment: comment } %>
+    </div>
+  </div>
 </li>

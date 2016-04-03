@@ -1,11 +1,16 @@
 <%= form_for :session, url: sessions_path do |f| %>
-  <%= f.label :login %>
-  <%= f.text_field :login %>
+  <div class="panel-body">
+    <div class="row form-group">
+      <%= f.label :login, class: 'col-xs-4 control-label' %>
+      <%= f.text_field :login, autocomplete: :off, class: 'col-xs-8 form-control' %>
+    </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit t 'views.submit' %>
+    <div class="row form-group">
+      <%= f.label :password, class: 'col-xs-4 control-label' %>
+      <%= f.password_field :password, class: 'col-xs-8 form-control' %>
+    </div>
+  </div>
+  <%= f.submit t('views.submit'), class: 'btn btn-primary' %>
 <% end %>
 
 <%= link_to t('views.sign_up'), new_user_path %>

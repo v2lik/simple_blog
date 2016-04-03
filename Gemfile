@@ -9,6 +9,9 @@ gem 'pg', '0.18.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.4'
 
+# Sass-powered version of Bootstrap 3
+gem 'bootstrap-sass', '3.3.6'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '4.1.1'
 
@@ -19,9 +22,6 @@ gem 'uglifier', '3.0.0'
 gem 'bcrypt-ruby', '3.1.5'
 
 group :development do
-  # Automatic Ruby code style checking tool
-  gem 'rubocop', '0.36.0'
-
   # An IRB alternative and runtime developer console
   gem 'pry', '0.10.3'
 end

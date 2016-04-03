@@ -1,4 +1,21 @@
-<%= image_tag @user.avatar %>
-<%= @user.login %>
-<%= link_to t('views.edit'), edit_user_path(@user) %>
-<%= link_to t('views.destroy'), @user, method: :delete, data: { confirm: t('views.confirm') } %>
+<div class="user">
+  <div class="row">
+    <div class="col-xs-3">
+      <%= image_tag @user.avatar, height: '200' %>
+    </div>
+    <div class="col-xs-5 col-xs-offset-4">
+      <div class="row">
+        <div class="col-xs-12 user-login">
+          <strong><%= t('views.login') %>:</strong>
+          <%= @user.login %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 user-links">
+      <%= link_to t('views.edit'), edit_user_path(@user) %>
+      <%= link_to t('views.destroy'), @user, method: :delete, data: { confirm: t('views.confirm') } %>
+    </div>
+  </div>
+</div>

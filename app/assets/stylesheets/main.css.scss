@@ -1,0 +1,55 @@
+@import "bootstrap";
+
+body {
+  color: #42648b;
+  background-color: #f0f2f5;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  width: 60%;
+  a, a:hover {
+    color: #fff;
+  }
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 10px 0 10px;
+  font-weight: bold;
+}
+
+.navbar-default {
+  background-color: #597da3;
+  border-color: #4e7199;
+}
+
+a {
+  color: #42648b;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #163550;
+}
+
+.alert.alert-error {
+  background-color: #eaafae;
+  border-color: #ce4844;
+}
+
+#error-explanation {
+  color: #b53530;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}

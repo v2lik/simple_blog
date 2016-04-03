@@ -13,6 +13,7 @@ en:
   views:
     edit: Edit
     destroy: Destroy
+    comment: Comment
     confirm: Are you sure?
     submit: Submit
     logout: Logout
@@ -22,3 +23,4 @@ en:
     posts: All Posts
     new_post: New Post
     show_profile: Show Profile
+    login: Login

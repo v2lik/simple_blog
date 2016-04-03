@@ -1,0 +1,27 @@
+.comment-child {
+  margin-left: 40px;
+}
+
+ul.comments {
+  list-style: none;
+  li {
+    background-color: #fff;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #e1e8ed;
+  }
+}
+
+.comment-body {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.comment-form {
+  padding-left: 40px;
+}
+
+.comment-child-form {
+  display: none;
+}

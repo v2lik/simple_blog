@@ -8,11 +8,7 @@ class CommentsController < ApplicationController
     comment = current_user.comments.build comment_params
     comment.post = @post unless @comment
     comment.parent = @comment
-    if comment.save
-      flash[:success] = I18n.t 'controllers.create', model: comment.class
-    else
-      flash[:error] = comment.errors.full_messages.join(', ')
-    end
+    comment.save
     redirect_to @post
   end
 
