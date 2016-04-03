@@ -13,6 +13,8 @@ en:
   views:
     edit: Edit
     destroy: Destroy
+    edit_user: Edit User
+    destroy_user: Destroy User
     comment: Comment
     confirm: Are you sure?
     submit: Submit

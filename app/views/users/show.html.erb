@@ -14,8 +14,8 @@
   </div>
   <div class="row">
     <div class="col-xs-12 user-links">
-      <%= link_to t('views.edit'), edit_user_path(@user) %>
-      <%= link_to t('views.destroy'), @user, method: :delete, data: { confirm: t('views.confirm') } %>
+      <%= link_to t('views.edit_user'), edit_user_path(@user) %> | 
+      <%= link_to t('views.destroy_user'), @user, method: :delete, data: { confirm: t('views.confirm') } %>
     </div>
   </div>
 </div>
