@@ -1,3 +1,4 @@
+<%= image_tag @user.avatar %>
 <%= @user.login %>
 <%= link_to t('views.edit'), edit_user_path(@user) %>
 <%= link_to t('views.destroy'), @user, method: :delete, data: { confirm: t('views.confirm') } %>

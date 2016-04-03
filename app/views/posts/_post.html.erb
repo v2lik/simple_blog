@@ -1,5 +1,6 @@
 <li>
   <%= link_to post do %>
+    <%= image_tag post.user.avatar %>
     <%= post.title %>
     <%= post.body %>
   <% end %>

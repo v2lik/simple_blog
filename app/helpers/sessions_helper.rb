@@ -20,12 +20,12 @@ module SessionsHelper
   def login(user)
     auth_token = User.new_auth_token
     cookies.permanent[:auth_token] = auth_token
-    user.update_attribute :auth_token, User.encrypt(auth_token)
+    user.update_column :auth_token, User.encrypt(auth_token)
     self.current_user = user
   end
 
   def logout
-    current_user.update_attribute(
+    current_user.update_column(
       :auth_token, User.encrypt(User.new_auth_token)
     )
     cookies.delete(:auth_token)

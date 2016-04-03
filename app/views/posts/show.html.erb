@@ -1,3 +1,4 @@
+<%= image_tag @post.user.avatar %>
 <%= @post.body %>
 <ul>
   <%= comments_tree @post.comments, @post %>

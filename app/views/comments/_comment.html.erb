@@ -1,4 +1,5 @@
 <li>
+  <%= image_tag comment.user.avatar %>
   <%= comment.body %>
   <% if owner?(comment) %>
     <%= link_to t('views.edit'), edit_post_comment_path(post, comment) %>
